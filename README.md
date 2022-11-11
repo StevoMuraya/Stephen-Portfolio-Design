@@ -1,2 +1,2 @@
 # stephen-portfolio
- My Portfolio Design Custom spects vanilla designs 
+ Portfolio Design with Custom vanilla styles 
