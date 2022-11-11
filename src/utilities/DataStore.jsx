@@ -8,7 +8,7 @@ export const navLinks = [
     name: "About",
   },
   {
-    path: "/epxerience",
+    path: "/experience",
     name: "Experience",
   },
   {
@@ -47,34 +47,4 @@ export const teckStacks = [
     { name: "Vue" },
     { name: "react" },
   ],
-];
-
-export const teckStack = [
-  {
-    frontend: {
-      name: "html5",
-      name: "css3",
-      name: "scss",
-      name: "Bootstrap",
-      name: "Wireframing",
-      name: "Web Design",
-    },
-    languages: {
-      name: "PHP",
-      name: "Java",
-      name: "Javascript",
-      name: "Rest",
-      name: "Android",
-      name: "Kotlin",
-      name: "C#",
-      name: "C++",
-    },
-    frameworks: {
-      name: "Laravel",
-      name: "React",
-      name: "Angular",
-      name: "Vue",
-      name: "react",
-    },
-  },
 ];
