@@ -563,10 +563,10 @@ button:hover,
             top: 0;
             transition: all 500ms ease-in-out;
             width: 80%;
-            rotate: 405deg;
+            rotate: 45deg;
           }
           .bar::after {
-            rotate: -405deg;
+            rotate: -45deg;
           }
         }
       }
