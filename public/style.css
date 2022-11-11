@@ -90,74 +90,6 @@ button:hover,
   -webkit-animation: glowLogo 5s ease-in-out infinite;
           animation: glowLogo 5s ease-in-out infinite;
 }
-@-webkit-keyframes glowLogoHover {
-  0% {
-    filter: drop-shadow(3px 5px 2px transparent);
-  }
-  100% {
-    filter: drop-shadow(3px 5px 2px white);
-  }
-}
-@keyframes glowLogoHover {
-  0% {
-    filter: drop-shadow(3px 5px 2px transparent);
-  }
-  100% {
-    filter: drop-shadow(3px 5px 2px white);
-  }
-}
-@-webkit-keyframes glowLogo {
-  0% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
-  }
-  50% {
-    filter: drop-shadow(3px 5px 2px white);
-  }
-  100% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
-  }
-}
-@keyframes glowLogo {
-  0% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
-  }
-  50% {
-    filter: drop-shadow(3px 5px 2px white);
-  }
-  100% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
-  }
-}
-@-webkit-keyframes glowBulb {
-  0% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 0 transparent);
-  }
-  50% {
-    filter: drop-shadow(3px 5px 1rem rgb(255, 209, 110));
-  }
-  100% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 0px transparent);
-  }
-}
-@keyframes glowBulb {
-  0% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 0 transparent);
-  }
-  50% {
-    filter: drop-shadow(3px 5px 1rem rgb(255, 209, 110));
-  }
-  100% {
-    rotate: 0deg;
-    filter: drop-shadow(3px 5px 0px transparent);
-  }
-}
 .main-container nav.navbar .nav-section .logo:hover img.logo-img {
   -webkit-animation: glowLogoHover 0.5s ease-in-out forwards;
           animation: glowLogoHover 0.5s ease-in-out forwards;
@@ -245,26 +177,6 @@ button:hover,
 }
 .main-container nav.navbar .nav-section .nav-lists .nav-list .nav-link.active:hover::after {
   outline-offset: 2px;
-}
-@-webkit-keyframes pulseLink {
-  0% {
-    scale: 1;
-    opacity: 1;
-  }
-  100% {
-    scale: 3;
-    opacity: 0;
-  }
-}
-@keyframes pulseLink {
-  0% {
-    scale: 1;
-    opacity: 1;
-  }
-  100% {
-    scale: 3;
-    opacity: 0;
-  }
 }
 .main-container nav.navbar .nav-section .nav-actions {
   display: flex;
@@ -649,5 +561,93 @@ button:hover,
   }
   100% {
     left: -100%;
+  }
+}
+@-webkit-keyframes glowLogoHover {
+  0% {
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+  100% {
+    filter: drop-shadow(3px 5px 2px white);
+  }
+}
+@keyframes glowLogoHover {
+  0% {
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+  100% {
+    filter: drop-shadow(3px 5px 2px white);
+  }
+}
+@-webkit-keyframes glowLogo {
+  0% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+  50% {
+    filter: drop-shadow(3px 5px 2px white);
+  }
+  100% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+}
+@keyframes glowLogo {
+  0% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+  50% {
+    filter: drop-shadow(3px 5px 2px white);
+  }
+  100% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+}
+@-webkit-keyframes glowBulb {
+  0% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(3px 5px 1rem white);
+  }
+  100% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 0px transparent);
+  }
+}
+@keyframes glowBulb {
+  0% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(3px 5px 1rem white);
+  }
+  100% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 0px transparent);
+  }
+}
+@-webkit-keyframes pulseLink {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
+  }
+}
+@keyframes pulseLink {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

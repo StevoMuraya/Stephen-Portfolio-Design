@@ -94,41 +94,6 @@ button:hover,
           transition: all 200ms ease-in-out;
           animation: glowLogo 5s ease-in-out infinite;
         }
-
-        @keyframes glowLogoHover {
-          0% {
-            filter: drop-shadow(3px 5px 2px transparent);
-          }
-          100% {
-            filter: drop-shadow(3px 5px 2px white);
-          }
-        }
-        @keyframes glowLogo {
-          0% {
-            rotate: 0deg;
-            filter: drop-shadow(3px 5px 2px transparent);
-          }
-          50% {
-            filter: drop-shadow(3px 5px 2px white);
-          }
-          100% {
-            rotate: 0deg;
-            filter: drop-shadow(3px 5px 2px transparent);
-          }
-        }
-        @keyframes glowBulb {
-          0% {
-            rotate: 0deg;
-            filter: drop-shadow(3px 5px 0 transparent);
-          }
-          50% {
-            filter: drop-shadow(3px 5px 1rem rgb(255, 209, 110));
-          }
-          100% {
-            rotate: 0deg;
-            filter: drop-shadow(3px 5px 0px transparent);
-          }
-        }
       }
 
       .logo:hover {
@@ -220,17 +185,6 @@ button:hover,
           }
           .nav-link.active:hover::after {
             outline-offset: 2px;
-          }
-
-          @keyframes pulseLink {
-            0% {
-              scale: 1;
-              opacity: 1;
-            }
-            100% {
-              scale: 3;
-              opacity: 0;
-            }
           }
         }
       }
@@ -669,11 +623,57 @@ button:hover,
   }
 }
 
+// Keyframes
+
 @keyframes stackScroller {
   0% {
     left: 0;
   }
   100% {
     left: -100%;
+  }
+}
+@keyframes glowLogoHover {
+  0% {
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+  100% {
+    filter: drop-shadow(3px 5px 2px white);
+  }
+}
+@keyframes glowLogo {
+  0% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+  50% {
+    filter: drop-shadow(3px 5px 2px white);
+  }
+  100% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 2px transparent);
+  }
+}
+@keyframes glowBulb {
+  0% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(3px 5px 1rem white);
+  }
+  100% {
+    rotate: 0deg;
+    filter: drop-shadow(3px 5px 0px transparent);
+  }
+}
+@keyframes pulseLink {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
   }
 }
