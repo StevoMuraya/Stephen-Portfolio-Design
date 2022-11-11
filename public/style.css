@@ -135,27 +135,27 @@ button:hover,
 @-webkit-keyframes glowBulb {
   0% {
     rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
+    filter: drop-shadow(3px 5px 0 transparent);
   }
   50% {
-    filter: drop-shadow(3px 5px 15px white);
+    filter: drop-shadow(3px 5px 1rem rgb(255, 209, 110));
   }
   100% {
     rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
+    filter: drop-shadow(3px 5px 0px transparent);
   }
 }
 @keyframes glowBulb {
   0% {
     rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
+    filter: drop-shadow(3px 5px 0 transparent);
   }
   50% {
-    filter: drop-shadow(3px 5px 15px white);
+    filter: drop-shadow(3px 5px 1rem rgb(255, 209, 110));
   }
   100% {
     rotate: 0deg;
-    filter: drop-shadow(3px 5px 2px transparent);
+    filter: drop-shadow(3px 5px 0px transparent);
   }
 }
 .main-container nav.navbar .nav-section .logo:hover img.logo-img {
@@ -192,8 +192,7 @@ button:hover,
   border-radius: 100vw;
   width: 8px;
   height: 8px;
-  scale: 0;
-  box-shadow: 0 -0.3rem 1rem rgb(100, 255, 219);
+  scale: 1;
   top: 120%;
   opacity: 0;
   transition: all 300ms cubic-bezier(0.91, 0.11, 0, 1.37);
@@ -215,6 +214,7 @@ button:hover,
 .main-container nav.navbar .nav-section .nav-lists .nav-list .nav-link:hover::after {
   top: 70%;
   opacity: 1;
+  box-shadow: 0 -0.3rem 1rem rgb(100, 255, 219);
 }
 .main-container nav.navbar .nav-section .nav-lists .nav-list .nav-link.active::before,
 .main-container nav.navbar .nav-section .nav-lists .nav-list .nav-link:hover::before {
@@ -248,37 +248,21 @@ button:hover,
 }
 @-webkit-keyframes pulseLink {
   0% {
-    scale: 0;
-    opacity: 0;
-  }
-  0% {
     scale: 1;
     opacity: 1;
   }
-  80% {
-    scale: 3;
-    opacity: 0;
-  }
   100% {
-    scale: 0;
+    scale: 3;
     opacity: 0;
   }
 }
 @keyframes pulseLink {
   0% {
-    scale: 0;
-    opacity: 0;
-  }
-  0% {
     scale: 1;
     opacity: 1;
   }
-  80% {
-    scale: 3;
-    opacity: 0;
-  }
   100% {
-    scale: 0;
+    scale: 3;
     opacity: 0;
   }
 }
@@ -381,9 +365,13 @@ button:hover,
   display: flex;
   align-items: center;
 }
+.main-container .pages-container .landing-container .landing-row .landing-col.extra {
+  min-width: 450px;
+}
 .main-container .pages-container .landing-container .landing-row .landing-col {
   display: flex;
   flex: 1;
+  min-width: 200px;
   flex-direction: column;
 }
 .main-container .pages-container .landing-container .landing-row .landing-col .glow-group {
@@ -403,7 +391,7 @@ button:hover,
 }
 .main-container .pages-container .landing-container .landing-row .landing-col .glow-group .not-glow-img .glow {
   pointer-events: none;
-  scale: 0.6;
+  scale: 0.7;
   z-index: 99;
   rotate: -45deg;
 }
@@ -416,7 +404,7 @@ button:hover,
 }
 .main-container .pages-container .landing-container .landing-row .landing-col .glow-group .glow-img .glow {
   pointer-events: none;
-  scale: 0.6;
+  scale: 0.7;
   z-index: 99;
   rotate: -45deg;
 }
@@ -443,7 +431,88 @@ button:hover,
 .main-container .pages-container .landing-container .landing-row .landing-col .landing-content .landing-actions .btn {
   padding: 0.5rem 1rem;
 }
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group {
+  width: 200%;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  -webkit-animation: stackScroller 20s linear infinite;
+          animation: stackScroller 20s linear infinite;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group .stack-scroller-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group .stack-scroller-inner .stack-card {
+  width: 100%;
+  background-color: #1c2e49;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: scale 300ms ease-in-out;
+  border-radius: 0.3rem;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group:first-child {
+  padding: 0.5rem 0 0 0;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group:last-child {
+  padding: 0 0 0.5rem 0;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group:nth-child(even) {
+  animation-direction: reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group:hover .stack-scroller-inner .stack-card:hover {
+  color: #64ffda;
+  box-shadow: 0 0 0.3rem #64ffda;
+  scale: 1.05;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container::after,
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  width: 30%;
+  background: linear-gradient(to right, #0a192f 20%, transparent);
+  height: 100%;
+  z-index: 90;
+}
+.main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container::after {
+  right: 0;
+  left: unset;
+  background: linear-gradient(to left, #0a192f, transparent);
+}
 
+@media screen and (max-width: 850px) {
+  .main-container .pages-container .landing-container .landing-row .landing-col.extra {
+    display: none;
+  }
+}
 @media screen and (max-width: 750px) {
   .main-container {
     position: relative;
@@ -564,5 +633,21 @@ button:hover,
   }
   .main-container nav.navbar {
     padding: 0 1rem 0 2rem;
+  }
+}
+@-webkit-keyframes stackScroller {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes stackScroller {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
   }
 }/*# sourceMappingURL=style.css.map */

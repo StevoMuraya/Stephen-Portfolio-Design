@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bulb from "/bulb-two.svg";
 import bulbClean from "/bulb-two(clean).svg";
+import StackScroller from "../components/StackScroller";
 
 const LandingPage = () => {
   return (
@@ -24,8 +25,9 @@ const LandingPage = () => {
               <Link className="btn">Hire Me</Link>
             </div>
           </div>
+          <StackScroller />
         </div>
-        <div className="landing-col">
+        <div className="landing-col extra">
           <div className="glow-group">
             <div className="not-glow-img">
               <img src={bulbClean} alt="" className="glow" />
