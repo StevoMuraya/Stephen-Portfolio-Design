@@ -191,6 +191,10 @@ button:hover,
   box-shadow: 0 0 0.5rem #64ffda;
 }
 
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+
 .main-container {
   width: 100%;
   min-height: 100vh;
@@ -199,6 +203,10 @@ button:hover,
   color: white;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .main-container nav.navbar {
   width: 100%;
@@ -398,26 +406,17 @@ button:hover,
 .main-container .right-links-container .links-list .link i {
   rotate: 90deg;
 }
-.main-container .pages-container::-webkit-scrollbar {
-  display: none;
-}
 .main-container .pages-container {
   width: 80%;
   height: calc(100vh - 5rem);
-  overflow: hidden;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  padding: 2rem 0;
-  scrollbar-width: none;
+  position: relative;
 }
 .main-container .pages-container .landing-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  top: 0;
   position: relative;
+  height: 100%;
   justify-content: center;
 }
 .main-container .pages-container .landing-container .landing-row {
@@ -635,16 +634,20 @@ button:hover,
   min-width: 200px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
   .main-container .pages-container .landing-container .landing-row .landing-col.extra {
     display: none;
   }
 }
 @media screen and (max-width: 750px) {
+  .cursor {
+    display: none;
+  }
   .main-container {
     position: relative;
     right: 0;
     overflow: hidden;
+    overflow-y: scroll;
   }
   .main-container nav.navbar .nav-section:first-child {
     width: 100%;
@@ -752,17 +755,25 @@ button:hover,
     right: 0;
   }
   .main-container .pages-container {
-    height: unset;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    position: relative;
   }
 }
 @media screen and (max-width: 400px) {
   .main-container {
     position: relative;
     right: 0;
-    overflow: hidden;
   }
   .main-container nav.navbar {
     padding: 0 1rem 0 2rem;
+  }
+  .main-container .pages-container .landing-container {
+    height: unset;
+  }
+  .main-container .pages-container .landing-container .landing-row .landing-col .title {
+    line-height: 2.8rem;
   }
 }
 @-webkit-keyframes stackScroller {

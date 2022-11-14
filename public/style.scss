@@ -214,6 +214,9 @@ button:hover,
   box-shadow: 0 0 0.5rem $primary-color;
 }
 
+.main-container::-webkit-scrollbar {
+  display: none;
+}
 .main-container {
   width: 100%;
   min-height: 100vh;
@@ -222,6 +225,11 @@ button:hover,
   color: white;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  // padding: 2rem 0;
+  scrollbar-width: none;
 
   nav.navbar {
     width: 100%;
@@ -436,26 +444,17 @@ button:hover,
       }
     }
   }
-  .pages-container::-webkit-scrollbar {
-    display: none;
-  }
   .pages-container {
     width: 80%;
     height: calc(100vh - $navHeight);
-    overflow: hidden;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    padding: 2rem 0;
-    scrollbar-width: none;
+    position: relative;
 
     .landing-container {
-      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100%;
-      top: 0;
       position: relative;
+      height: 100%;
       justify-content: center;
 
       .landing-row {
@@ -717,7 +716,7 @@ button:hover,
 
 // Respinsiveness
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
   .main-container {
     .pages-container {
       .landing-container {
@@ -731,10 +730,15 @@ button:hover,
   }
 }
 @media screen and (max-width: 750px) {
+  .cursor {
+    display: none;
+  }
+
   .main-container {
     position: relative;
     right: 0;
     overflow: hidden;
+    overflow-y: scroll;
     nav.navbar {
       .nav-section:first-child {
         width: 100%;
@@ -854,7 +858,8 @@ button:hover,
     }
 
     .pages-container {
-      height: unset;
+      min-height: max-content;
+      position: relative;
     }
   }
 }
@@ -863,9 +868,23 @@ button:hover,
   .main-container {
     position: relative;
     right: 0;
-    overflow: hidden;
+    // overflow: hidden;
     nav.navbar {
       padding: 0 1rem 0 2rem;
+    }
+
+    .pages-container {
+      .landing-container {
+        height: unset;
+
+        .landing-row {
+          .landing-col {
+            .title {
+              line-height: 2.8rem;
+            }
+          }
+        }
+      }
     }
   }
 }
