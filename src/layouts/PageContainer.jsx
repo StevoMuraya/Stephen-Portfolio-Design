@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import LeftLinks from "./LeftLinks";
 import RightLinks from "./RightLinks";

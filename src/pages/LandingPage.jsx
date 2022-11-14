@@ -21,8 +21,12 @@ const LandingPage = () => {
               aperiam suscipit excepturi aspernatur.
             </p>
             <div className="landing-actions">
-              <Link className="btn highlight">My Work</Link>
-              <Link className="btn">Hire Me</Link>
+              <Link to="" className="btn highlight">
+                My Work
+              </Link>
+              <Link to="" className="btn">
+                Hire Me
+              </Link>
             </div>
           </div>
           <StackScroller />

@@ -1,3 +1,18 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  margin: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +39,125 @@ a {
 
 a:hover {
   text-shadow: 0 0.1rem 0.5rem #64ffda;
+}
+
+html:hover .cursor {
+  opacity: 1;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+}
+.cursor--hover .cursor-inner {
+  transform: scale(0.5);
+  opacity: 0;
+}
+.cursor--hover .cursor-outer {
+  transform: scale(1.2);
+  border-color: #64ffda;
+  opacity: 1;
+}
+.cursor--hover .cursor-outer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  outline: 1px solid #64ffda;
+  -webkit-animation: pulseCursor 2s ease-in-out infinite;
+          animation: pulseCursor 2s ease-in-out infinite;
+}
+.cursor--hover .cursor-outer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  outline: 1px solid #64ffda;
+  -webkit-animation: pulseCursor 2s ease-in-out infinite;
+          animation: pulseCursor 2s ease-in-out infinite;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.cursor-move-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+}
+
+.cursor-move-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cursor-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #64ffda;
+  box-shadow: 0 0 0.3rem white;
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cursor-outer {
+  display: block;
+  width: 100%;
+  box-shadow: 0 0 0.3rem white;
+  height: 100%;
+  border: 2px solid rgba(10, 25, 47, 0.75);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: border 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0 none;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: border 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+button:hover, button:focus {
+  border-color: #fff;
 }
 
 button,
@@ -269,6 +403,7 @@ button:hover,
   overflow: hidden;
   overflow-y: scroll;
   -ms-overflow-style: none;
+  padding: 2rem 0;
   scrollbar-width: none;
 }
 .main-container .pages-container .landing-container {
@@ -277,6 +412,8 @@ button:hover,
   flex-direction: column;
   align-items: center;
   height: 100%;
+  top: 0;
+  position: relative;
   justify-content: center;
 }
 .main-container .pages-container .landing-container .landing-row {
@@ -287,10 +424,14 @@ button:hover,
 .main-container .pages-container .landing-container .landing-row .landing-col.extra {
   min-width: 450px;
 }
+.main-container .pages-container .landing-container .landing-row .landing-col:first-child {
+  padding: 0 1rem;
+}
 .main-container .pages-container .landing-container .landing-row .landing-col {
   display: flex;
   flex: 1;
   min-width: 200px;
+  gap: 1rem;
   flex-direction: column;
 }
 .main-container .pages-container .landing-container .landing-row .landing-col .glow-group {
@@ -363,6 +504,7 @@ button:hover,
 .main-container .pages-container .landing-container .landing-row .landing-col .stack-scroller-container .stack-scroller-group {
   width: 200%;
   display: flex;
+  transition: all 200ms ease-in-out;
   flex-wrap: nowrap;
   position: relative;
   -webkit-animation: stackScroller 20s linear infinite;
@@ -605,6 +747,9 @@ button:hover,
   .main-container nav.navbar .nav-section:last-child.active {
     right: 0;
   }
+  .main-container .pages-container {
+    height: unset;
+  }
 }
 @media screen and (max-width: 400px) {
   .main-container {
@@ -737,6 +882,26 @@ button:hover,
   }
 }
 @keyframes pulseLink {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes pulseCursor {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
+  }
+}
+@keyframes pulseCursor {
   0% {
     scale: 1;
     opacity: 1;

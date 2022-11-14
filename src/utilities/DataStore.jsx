@@ -46,5 +46,7 @@ export const teckStacks = [
     { name: "Angular" },
     { name: "Vue" },
     { name: "react" },
+    { name: "Mysql" },
+    { name: "Linux" },
   ],
 ];
