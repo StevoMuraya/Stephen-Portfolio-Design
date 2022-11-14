@@ -34,7 +34,9 @@ const Navbar = ({ path }) => {
           ))}
         </div>
         <div className="nav-actions">
-          <div className="btn highlight">Resume</div>
+          <Link to="/resume" className="btn highlight">
+            Resume
+          </Link>
         </div>
       </div>
     </nav>
