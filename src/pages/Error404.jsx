@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ErrorImg from "../../public/404-SVG.svg";
 
 const Error404 = () => {
@@ -16,8 +17,11 @@ const Error404 = () => {
           Don't think I've made that one yet
         </h1>
         <p className="error-desc">
-          You can check again later on or inform me about this from the
-          <span>Contact</span> tab on top 👆
+          You can check again later on or inform me about the error from the
+          <span>
+            <Link to="/contact"> Contact </Link>
+          </span>
+          page
         </p>
       </div>
     </div>

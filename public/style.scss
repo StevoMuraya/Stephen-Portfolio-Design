@@ -662,7 +662,7 @@ button:hover,
       }
 
       .error-img {
-        width: 60%;
+        width: 40%;
         max-width: 500px;
         display: flex;
         align-items: flex-end;
@@ -708,6 +708,12 @@ button:hover,
           // text-align: center;
           max-width: 400px;
           min-width: 200px;
+
+          span {
+            color: $primary-color;
+            animation: glowText 2s ease-in-out infinite;
+            font-weight: 500;
+          }
         }
       }
     }
@@ -863,7 +869,6 @@ button:hover,
     }
   }
 }
-
 @media screen and (max-width: 400px) {
   .main-container {
     position: relative;
@@ -890,7 +895,6 @@ button:hover,
 }
 
 // Keyframes
-
 @keyframes stackScroller {
   0% {
     left: 0;

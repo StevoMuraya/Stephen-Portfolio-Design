@@ -592,7 +592,7 @@ button:hover,
   text-shadow: 0 0 0.3rem #64ffda;
 }
 .main-container .pages-container .error-container .error-img {
-  width: 60%;
+  width: 40%;
   max-width: 500px;
   display: flex;
   align-items: flex-end;
@@ -632,6 +632,12 @@ button:hover,
   font-weight: 200;
   max-width: 400px;
   min-width: 200px;
+}
+.main-container .pages-container .error-container .error-text .error-desc span {
+  color: #64ffda;
+  -webkit-animation: glowText 2s ease-in-out infinite;
+          animation: glowText 2s ease-in-out infinite;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1050px) {
