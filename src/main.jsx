@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "../public/style.css";
+import { Analytics } from "@vercel/analytics/react";
 
 //Add Font Awesome to Portal
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    <Analytics />
   </React.StrictMode>
 );
