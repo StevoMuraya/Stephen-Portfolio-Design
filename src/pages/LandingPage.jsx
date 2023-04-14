@@ -15,10 +15,11 @@ const LandingPage = () => {
               I'm Stephen
             </h1>
             <p className="text-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Corporis, rem. Dolorum minima ducimus autem inventore expedita
-              fuga consectetur temporibus eveniet, ipsum aut quis ut cumque enim
-              aperiam suscipit excepturi aspernatur.
+              I am a software developer with a proven track in systems
+              development for the past 5 years, a UI/UX expert specialized in
+              front-end design and product actualization; With a keen eye, I
+              replicate mockup designs, producing pixel-perfect codes, which
+              translate to engaging digital experiences.
             </p>
             <div className="landing-actions">
               <Link to="" className="btn highlight">
