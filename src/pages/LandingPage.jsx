@@ -17,7 +17,7 @@ const LandingPage = () => {
             <p className="text-desc">
               I am a software developer with a proven track in systems
               development for the past 5 years, a UI/UX expert specialized in
-              front-end design and product actualization; With a keen eye, I
+              front-end design and product actualization. With a keen eye, I
               replicate mockup designs, producing pixel-perfect codes, which
               translate to engaging digital experiences.
             </p>

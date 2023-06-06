@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import colored_logo from "../../public/stephen-logo-colored.svg";
+import colored_logo from "/stephen-logo-colored.svg";
 import { navLinks } from "./../utilities/DataStore";
+import resumeDoc from "../assets/documents/Stephen Gathaiya Muraya (Resume).pdf";
 
 const Navbar = ({ path }) => {
   const [navToggle, setNavToggle] = useState(false);
@@ -34,9 +35,13 @@ const Navbar = ({ path }) => {
           ))}
         </div>
         <div className="nav-actions">
-          <Link to="/resume" className="btn highlight">
+          <a
+            href={resumeDoc}
+            download="Stephen Gathaiya Muraya Resume"
+            className="btn highlight"
+          >
             Resume
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

@@ -82,7 +82,7 @@ const PageContainer = ({ Page }) => {
     function lerp(s, e, t) {
       return (1 - t) * s + t * e;
     }
-  }, [Page]);
+  }, []);
   return (
     <>
       <div className="main-container">
