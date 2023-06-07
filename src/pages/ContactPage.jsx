@@ -14,7 +14,7 @@ const ContactPage = () => {
       <div className="error-text">
         <h1 className="error-title">
           <span>Uuumm.....</span>
-          This page is still under construction😢
+          This page is still under construction
         </h1>
         <p className="error-desc">
           You can check again later or inform me about the error from the
