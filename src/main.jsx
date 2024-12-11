@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "../public/style.css";
 import { Analytics } from "@vercel/analytics/react";
+import TagManager from "react-gtm-module";
 
 //Add Font Awesome to Portal
 //////////////////////////////////////////////////////////////////////////////////////////////
